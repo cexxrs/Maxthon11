@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #0A0E27; /* Deep Space Navy - slate-950 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #1A1F3A; /* Cosmic Depth Blue - slate-900 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #00D4FF; /* Electric Cyan - cyan-400 */
+    --color-accent-foreground: #0A0E27; /* slate-950 */
+    
+    /* Background Colors */
+    --color-background: #0F1419; /* Rich Charcoal - slate-950 */
+    --color-foreground: #FFFFFF; /* white */
+    
+    /* Surface Colors */
+    --color-surface: #8B5CF6; /* Vibrant Purple - violet-500 */
+    --color-surface-foreground: #FFFFFF; /* white */
+    
+    /* Card Colors */
+    --color-card: #1A1F3A; /* slate-900 */
+    --color-card-foreground: #FFFFFF; /* white */
+    
+    /* Popover Colors */
+    --color-popover: #1A1F3A; /* slate-900 */
+    --color-popover-foreground: #FFFFFF; /* white */
+    
+    /* Muted Colors */
+    --color-muted: #2A2F3A; /* slate-800 */
+    --color-muted-foreground: #94A3B8; /* slate-400 */
+    
+    /* Destructive Colors */
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #0A0E27; /* slate-950 */
+    
+    /* Error Colors */
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Border & Input Colors */
+    --color-border: #2A2F3A; /* slate-800 */
+    --color-input: #2A2F3A; /* slate-800 */
+    --color-ring: #00D4FF; /* cyan-400 */
+    
+    /* Brand Specific Colors */
+    --color-cta: #FFD700; /* gold-500 */
+    --color-cta-foreground: #0A0E27; /* slate-950 */
+    
+    --color-text-primary: #FFFFFF; /* white */
+    --color-text-secondary: #B8BCC8; /* slate-300 */
+    
+    /* Spacing & Layout */
+    --radius: 0.5rem;
+    --spacing-unit: 8px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .glow-cyan {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+  }
+  
+  .glow-gold {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  }
+  
+  .shadow-premium {
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.15), 0 8px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+}
